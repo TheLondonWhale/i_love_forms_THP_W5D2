@@ -1,6 +1,6 @@
 <h1 align="center"> Welcome Bitch!</h1>
 
-
+<!--
 <form action="/user" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>ton nom d'utilisateur: </p><input type="text" name="username"> <br>
@@ -8,3 +8,29 @@
   <p>une petite description pour ton profil:</p><input type="text" name="bio"> <br>
   <input type="submit" name="Envoyer">
 </form>
+-->
+
+<!--
+<%= form_tag('create', method: "post") do %>
+
+  <%= text_field_tag 'username', nil, placeholder: "Ton username" %>
+  <br />
+  <br />
+  <%= email_field_tag 'email', nil, placeholder: "email@example.com" %>
+  <br />
+  <br />
+  <%= text_area_tag 'bio', nil, placeholder: "Une petite description ici" %>
+  <br />
+  <br />
+  <%= submit_tag 'Envoyer' %>
+
+<% end %>
+-->
+
+
+<%= form_for :user do |f| %>
+  First name: <%= f.text_field :username %><br /> <br />
+  e-mail : <%= f.text_field :email %><br /> <br />
+  Bio : <%= f.text_area :bio %><br /> <br />
+  <%= f.submit %>
+<% end %>

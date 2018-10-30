@@ -4,8 +4,6 @@ class UserController < ApplicationController
   end
 
   def create
-    puts "VOICI LES TOKENS "
-    puts params["username"]
-    User.create(username:"#{params["username"]}", email:"#{params["email"]}", bio:"#{params["bio"]}")
+    @user = User.create(username:"#{params["username"]}", email:"#{params["email"]}", bio:"#{params["bio"]}")
   end
 end
