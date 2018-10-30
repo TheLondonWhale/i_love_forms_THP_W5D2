@@ -1,36 +1,46 @@
-<h1 align="center"> Welcome Bitch!</h1>
+<h1 align="center"> Bienvenue!</h1>
 
-<!--
+<div align="center">
+
+  <h3>Tu peux nous donner quelques infos stp?</h3>
+
+  <a href="http://www.noelshack.com/2018-44-2-1540909242-that-would-be-great.jpg">
+  <img src="http://image.noelshack.com/minis/2018/44/2/1540909242-that-would-be-great.png"/>
+  </a>
+
+</div>
+
 <form action="/user" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>ton nom d'utilisateur: </p><input type="text" name="username"> <br>
-  <p>ton adresse email:</p><input type="text" name="email" "> <br>
-  <p>une petite description pour ton profil:</p><input type="text" name="bio"> <br>
-  <input type="submit" name="Envoyer">
+  <p>ton adresse email:</p> <input type="text" name="email" "> <br>
+  <p>une petite description pour ton profil:</p> <input type="text" name="bio"> <br>
+  <input type="submit" name="Enregistrer">
 </form>
--->
+
+<%= form_tag('/user', method: "post") do %>
+
+  <%= text_field_tag 'username', nil, placeholder: "ex: TheHackingBitch" %>
+    <br />
+    <br />
+  <%= email_field_tag 'email', nil, placeholder: "email@example.com" %>
+    <br />
+    <br />
+  <%= text_area_tag 'bio', nil, placeholder: "Une petite description ici" %>
+    <br />
+    <br />
+  <%= submit_tag 'Enregistrer' %>
+
+<% end %>
 
 <!--
-<%= form_tag('create', method: "post") do %>
-
-  <%= text_field_tag 'username', nil, placeholder: "Ton username" %>
-  <br />
-  <br />
-  <%= email_field_tag 'email', nil, placeholder: "email@example.com" %>
-  <br />
-  <br />
-  <%= text_area_tag 'bio', nil, placeholder: "Une petite description ici" %>
-  <br />
-  <br />
-  <%= submit_tag 'Envoyer' %>
-
+<%= form_for @user, url:{action: "create"} do |f| %>
+  Username:
+  <%= f.text_field :username, placeholder: "ex: TheHackingBitch" %><br /> <br />
+  e-mail :
+  <%= f.text_field :email, placeholder: "email@example.com" %><br /> <br />
+  Bio :
+  <%= f.text_area :bio, placeholder: "Une petite description sympa" %><br /> <br />
+  <%= f.submit "Enregistrer"%>
 <% end %>
 -->
-
-
-<%= form_for :user do |f| %>
-  First name: <%= f.text_field :username %><br /> <br />
-  e-mail : <%= f.text_field :email %><br /> <br />
-  Bio : <%= f.text_area :bio %><br /> <br />
-  <%= f.submit %>
-<% end %>
