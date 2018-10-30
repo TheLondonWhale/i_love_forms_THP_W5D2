@@ -1,5 +1,3 @@
-# README
-
 # I LOVE FORMS
 
 Ce projet a été réalisé  en collaboration avec <a href = "https://github.com/Kirimari">Mustapha Ait Ouayhou</a> (@Mouss)
@@ -20,9 +18,18 @@ de la team Lilloise #WELSH de The Hacking Project.
 -4) ```rails db:create```.</br>
 -5) ```Rails server```.</br>
 
-<h3>Pour voir l'app en production :</h3>
+:warning: ATTENTION :warning:
 
-https://test-w5d1-gossip-project.herokuapp.com/
+la method `create` n'est pas adaptée aux 3 méthodes de formulaires utilisées.
+
+Pour utiliser le ```form_tag``` il faut donc:
+  
+  * enlever le `form_tag` des commentaires dans la `view`
+  * Aller dans le controller effacer le contenu de la method create le rempalcer par le contenu en commentaire.
+
+<h3> Pour voir l'app en production :</h3>
+
+<i> https://i-love-forms-tlw.herokuapp.com/ </i>
 
 
 
