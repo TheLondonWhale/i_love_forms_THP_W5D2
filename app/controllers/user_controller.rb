@@ -5,7 +5,7 @@ class UserController < ApplicationController
   end
 
   def create
-    User.create(username: params["username"], email: params["email"]", bio: params["bio"]")
+    User.create(username: params["username"], email: params["email"], bio: params["bio"])
 
 =begin
     @user = User.create(username: params["user"]["username"],
