@@ -7,7 +7,7 @@ de la team Lilloise #WELSH de The Hacking Project.
 
 -1) créer une app via ```Rails (5.2.1)``` et ```Ruby (2.5.1)``` </br>
 -2) créer quelques pages web avec liens dynamiques. </br>
--3) créer des formulaires liés à la DB en utilsant 3 méthodes (```htlm```, ```form_for``` ```form_tag```). </br>
+-3) créer des formulaires liés à la DB en utilsant 3 méthodes (```html```, ```form_for``` ```form_tag```). </br>
 -4) mettre l'appli en prod via Heroku</br>
 
 <h3>Pour utiliser l'app:</h3>
@@ -25,7 +25,7 @@ la method `create` n'est pas adaptée aux 3 méthodes de formulaires utilisées.
 Pour utiliser le ```form_tag``` il faut donc:
   
   * enlever le `form_tag` des commentaires dans la `view`
-  * Aller dans le controller effacer le contenu de la method create le rempalcer par le contenu en commentaire.
+  * Aller dans le `controller` effacer le contenu de la `method create` le remplacer par le contenu en commentaire.
 
 <h3> Pour voir l'app en production :</h3>
 
