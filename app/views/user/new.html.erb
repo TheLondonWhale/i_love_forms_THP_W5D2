@@ -1,0 +1,10 @@
+<h1 align="center"> Welcome Bitch!</h1>
+
+
+<form action="/user" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>ton nom d'utilisateur: </p><input type="text" name="username"> <br>
+  <p>ton adresse email:</p><input type="text" name="email" "> <br>
+  <p>une petite description pour ton profil:</p><input type="text" name="bio"> <br>
+  <input type="submit" name="Envoyer">
+</form>
